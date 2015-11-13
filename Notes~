@@ -1,0 +1,61 @@
+DPJ - 2015.11.12
+================
+
+Following setup notes at github.
+
+https://help.github.com/articles/set-up-git/
+
+Best assume account already exists? Each student makes own project?
+ 
+DPJ - 2015.10.11
+================
+
+Current situation
+-----------------
+
+2 accounts:
+
+1)
+cambioinfo: associated with 2 email addresses, dpj10@cam.ac.uk & pj237@cam.ac.uk
+password is IudexRex1948
+
+Must be official facility account? has a couple of repositories I made late 2014 plus
+one active repository used by Mark Dunning for R Intro material
+
+Other than trying to stop this being where I am logged into everytime I go to github (Done),
+I think I leave this one alone. Password not for passing on! Should be changed. Discussed with Paul.
+
+Treat as read only from here on.
+
+2)
+dpjudge: associated with just david.p.judge@gmail
+password is IudexRex1948
+name = David Philip Judge
+email = david.p.judge@gmail
+
+This is where I experiment.
+--------------------
+
+Running the commands in ~/GIT/Initialise_git_dpjudge
+I reckon creates ~.gitconfig
+ALmost certain, --global means "apply to all repositories", which implies some way to make the commands repository specific. Cannot see the need for th latter? Again, more thought here.
+
+I suspect this only needs to be done once, assuming I always use only the one account.
+--------------------
+
+Authenticating with ssh and https also are (I think) one off activities (assuming one sticks to one account).
+
+For ssh I followed
+https://help.github.com/articles/which-remote-url-should-i-use/#cloning-with-ssh
+For http I followed
+https://help.github.com/articles/which-remote-url-should-i-use/#cloning-with-https-recommended
+
+Should I introduce 2FA in a course context? I am inclined to at least mention it, Paul says no, which is no more than predictable. More thought required, well away from writing exercises now.
+
+Extended Initialise_git_dpjudge to include the comands:
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+These added to ~/.gitconfig
+They instruct the github password to be stored in cache for an hour to avoid having to type it in so often (default is 15 minutes, second command changes default).
+I imagine .gitconfig is acted upon after first use of git?
+

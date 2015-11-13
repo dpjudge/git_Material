@@ -1,0 +1,5 @@
+git config --global user.name "David Philip Judge"
+git config --global user.email "david.p.judge@gmail"
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+
